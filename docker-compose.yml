@@ -1,0 +1,15 @@
+version: '3'
+services:
+  image-service:
+    build: ./image-service
+    ports:
+      - "80:80"
+    # networks:
+    #   - stop-nswf-net
+  bot:
+    build: ./bot
+    # networks:
+    #   - stop-nsfw-net
+# networks:
+#     stop-nsfw-net:
+#       driver: bridge
